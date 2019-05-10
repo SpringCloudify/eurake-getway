@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: eureka-getaway
+
+server:
+  port: 21001
+
+eureka:
+  instance:
+    appname: erurake-getaway
+    hostname: localhost
+    non-secure-port: 11001
+    instance-id: ${eureka.instance.appname}@${eureka.instance.hostname}:${server.port}
+
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.non-secure-port:11001}/eureka/
+    healthcheck:
+      enabled: true

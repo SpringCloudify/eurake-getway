@@ -1,0 +1,6 @@
+info:
+  description: Spring cloud eureka server
+
+spring:
+  profiles:
+    active: dev
